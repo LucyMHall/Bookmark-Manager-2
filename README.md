@@ -21,4 +21,4 @@ Type 'CREATE DATABASE bookmark_manager;' - press enter. Check your database has 
 3) Connect to the database using the pqsl command \c bookmark_manager;
 
 4) Run the query we have saved in the file 01_create_bookmarks_table.sql
-Copy and paste the contents of this file into the terminal and press enter. View the table using the '\dt' command. Find out more information about a particular table using '\'dt+'.
+Copy and paste the contents of this file into the terminal and press enter. View the table using the '\dt' command. Find out more information about a particular table using '\'d+ bookmarks'.
