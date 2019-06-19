@@ -1,14 +1,21 @@
 require 'pg'
 
 class Bookmark
+
+
   def self.all
-    if ENV['ENVIRONMENT'] = 'test'
-      connection = PG.connect(dbname: 'bookmark_manager_test')
-    else
-      connection = PG.connect(dbname: 'bookmark_manager')
-    end
-      result = connection.exec("SELECT * FROM bookmarks;")
-      @array_of_bookmarks = result.map { |bookmark| bookmark["url"] }
-      @array_of_bookmarks
+    result = database_connection.exec("SELECT * FROM bookmarks;")
+    result.map { |bookmark| bookmark["url"] }
   end
+
+  private
+
+  def self.database_connection
+    if ENV['ENVIRONMENT'] = 'test'
+      PG.connect(dbname: 'bookmark_manager_test')
+    else
+      PG.connect(dbname: 'bookmark_manager')
+    end
+  end
+
 end
