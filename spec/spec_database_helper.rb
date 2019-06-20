@@ -6,7 +6,5 @@ def reset_test_table
 end
 
 def create_test_data
-  connection = PG.connect(dbname: 'bookmark_manager_test')
-  connection.exec("INSERT INTO bookmarks (url) VALUES ('www.google.com');")
-  connection.exec("SELECT * FROM bookmarks;")
+  Bookmark.create("www.google.com")
 end
