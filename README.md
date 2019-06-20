@@ -2,15 +2,16 @@
 
 <h2> User Stories </h2>
 
-As a person,
+<i>As a person,
 So that I can see bookmarks I have logged,
 I’d like to see a list of bookmarks on my screen
 
 As a person,
 So that I can revisit my most accessed web pages,
-I'd like to be able to add to my list of bookmarks
+I'd like to be able to add to my list of bookmarks</i>
 
 <h2> Proposed classes: </h2>
+
 - Bookmarks
 - Potentially (ListofBookmarks)
 
@@ -22,11 +23,11 @@ I'd like to be able to add to my list of bookmarks
 From the terminal type 'psql postgres' and press enter. You are now in the psql environment.
 
 2) You need to make both a test database which is used when running tests on the program and simulated user interactions
-  1) Test Database: Type into the terminal `CREATE DATABASE bookmark_manager_test;`
-  2) Development Database: Type into the terminal `CREATE DATABASE bookmark_manager;`
-  3) Check databases have been created: `\l` command, lists all the current databases
+  - Test Database: Type into the terminal `CREATE DATABASE bookmark_manager_test;`
+  - Development Database: Type into the terminal `CREATE DATABASE bookmark_manager;`
+  - Check databases have been created: `\l` command, lists all the current databases
 
-3) Connect to the databases using the pqsl command \c bookmark_manager;
+3) Connect to the databases using the pqsl command `\c bookmark_manager;``
 
-4) Run the query we have saved in the file 01_create_bookmarks_table.sql for both the test and development database
-Copy and paste the contents of this file into the terminal and press enter. View the table using the '\dt' command. Find out more information about a particular table using '\'d+ bookmarks'.
+4) Run the query we have saved in the file `01_create_bookmarks_table.sql` for both the test and development database
+Copy and paste the contents of this file into the terminal and press enter. View the table using the `\dt` command. Find out more information about a particular table using `\d+ bookmarks`.
