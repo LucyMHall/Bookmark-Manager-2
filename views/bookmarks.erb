@@ -1,2 +1,4 @@
-<h1> Hello </h1>
-  <%= @bookmarks %>
+<h1> Here are your saved bookmarks: </h1>
+  <ul>
+    <li> <%= @bookmarks.join("</li><li>")%>
+  </ul>
