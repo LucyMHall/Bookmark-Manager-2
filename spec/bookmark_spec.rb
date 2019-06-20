@@ -15,4 +15,12 @@ describe Bookmark do
       expect(Bookmark.all).to include("http://www.destroyallsoftware.com")
     end
   end
+
+  describe '::create' do
+    it 'should take a url as an argument and add the url to the database' do
+      Bookmark.create('www.fakeurl.com')
+      expect(Bookmark.all).to include('www.fakeurl.com')
+    end
+  end
+
 end

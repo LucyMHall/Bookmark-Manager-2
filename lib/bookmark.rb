@@ -2,6 +2,10 @@ require 'pg'
 
 class Bookmark
 
+  def self.create(choosen_url)
+    @choosen_url = choosen_url
+    database_connection.exec("INSERT INTO bookmarks(url) VALUES('#{@choosen_url}');")
+  end
 
   def self.all
     result = database_connection.exec("SELECT * FROM bookmarks;")
