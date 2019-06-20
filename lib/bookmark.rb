@@ -2,14 +2,13 @@ require 'pg'
 
 class Bookmark
 
-  def self.create(choosen_url)
-    @choosen_url = choosen_url
-    database_connection.exec("INSERT INTO bookmarks(url) VALUES('#{@choosen_url}');")
+  def self.create(choosen_url, title)
+    database_connection.exec("INSERT INTO bookmarks(url, title) VALUES('#{choosen_url}', '#{title}');")
   end
 
   def self.all
     result = database_connection.exec("SELECT * FROM bookmarks;")
-    result.map { |bookmark| bookmark["url"] }
+    result.map { |bookmark| bookmark["title"] }
   end
 
   private

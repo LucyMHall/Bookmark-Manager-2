@@ -6,5 +6,5 @@ def reset_test_table
 end
 
 def create_test_data
-  Bookmark.create("www.google.com")
+  Bookmark.create("www.google.com", "Google")
 end
